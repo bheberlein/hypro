@@ -1,0 +1,61 @@
+{
+  "Sensors": {
+  	"vnir": {
+  		"id": "VNIR_1800_SN00840",
+  		"fov": 34,
+  		"ifov": [0.32, 0.64],
+  		"bands": 186,
+  		"samples": 1800
+    },
+    "swir": {
+        "id": "SWIR_384_SN3142",
+        "fov": 32,
+        "ifov": [1.46, 1.46],
+        "bands": 288,
+        "samples": 384
+    }
+  },
+  
+  "Data": {
+    "input_dir": "Z:\townsenduser-rw\hyspex_raw\2018\20180529\AARS-BIOFUEL-2_20180529",
+    "output_dir": "/media/nanfeng/My Passport/Hyspex/Output"
+  },
+  
+  "Radiometric_Calibration": {
+    "setting_file": {
+        "vnir": "E:/HyspexPro/settings/VNIR_1800_SN00840_FoVx2_2019-06-05T220151.set",
+        "swir": "E:/HyspexPro/settings/SWIR_384_SN3142_FoVx2_2019-06-05T220237.set"
+    }
+  },
+  
+  "Atmospheric_Correction": {
+    "atm_database_dir": "Z:/townsend user -r&w/HyspexPro/AtmDatabase",
+    "atm_mode": "midlatitude_summer",
+    "vis_retrieval": "pixel_based",
+    "wvc_retrieval": "pixel_based"
+  },
+  
+  "Geometric_Correction": {
+    "pixel_size": {
+        "vnir": 0.25,
+        "swir": 0.5
+    },
+    "boresight": {
+        "gcp_file": {
+        	"vnir": null,
+        	"swir": null
+        },
+        "offsets": {
+            "vnir": [1.2282600, 0.60034178, -0.22073060, 0],
+            "swir": [-0.55475833, 0.41950607, 0.033132106, 0]
+        },
+        "options": [true, true, true, false]
+    },
+    "sensor_model_file": {
+        "vnir": "E:/HyspexPro/sensor-model/FOVexpSensormodelVNIR1800SN00840_180deg_rotated.txt",
+        "swir": "E:/HyspexPro/sensor-model/FOVexpSensormodelSWIR384SN3142_180deg_rotated.txt"
+    }
+  },
+  
+  "DEM": "/media/nanfeng/My Passport/Hyspex/Input/dem"
+}
